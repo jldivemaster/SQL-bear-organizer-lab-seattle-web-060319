@@ -19,8 +19,14 @@ def select_youngest_bear_and_returns_name_and_age
 end
 
 def selects_most_prominent_color_and_returns_with_count
-  "SELECT color, COUNT(color) FROM bears GROUP BY COUNT(color) HAVING MAX(COUNT);"
+  "SELECT color, COUNT(color) FROM bears GROUP BY color ORDER BY COUNT(color) LIMIT 1;"
 end
+
+SELECT name, count(name) AS visits
+FROM visits
+WHERE visitor = 1
+GROUP BY name
+ORDER BY visits DESC LIMIT 1;
 
 def counts_number_of_bears_with_goofy_temperaments
   "SELECT COUNT(temperament) FROM bears WHERE temperament = 'goofy'"
