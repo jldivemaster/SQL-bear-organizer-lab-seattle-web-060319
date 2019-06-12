@@ -19,7 +19,7 @@ def select_youngest_bear_and_returns_name_and_age
 end
 
 def selects_most_prominent_color_and_returns_with_count
-  "SELECT color, COUNT(*) FROM bears GROUP BY color ORDER BY COUNT(color) LIMIT 1;"
+  "SELECT color, COUNT(*) FROM bears GROUP BY color ORDER BY COUNT(*) LIMIT 1;"
 end
 
 # SELECT name, count(name) AS visits
